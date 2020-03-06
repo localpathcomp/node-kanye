@@ -1,0 +1,24 @@
+body {
+    background: #000;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+h1.quote {
+    color: #fff;
+    font-size: 2rem;
+}
+
+button.btn {
+    background: rgba(0, 0, 0, 0);
+    border-radius: 12px;
+    border: 3px solid #fff;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 14px 24px;
+}
+
+button.btn:hover {
+    background: rgba(0, 0, 0, 0.5);
+    border: 3px solid rgba(0, 0, 0, 0.1)
+}
