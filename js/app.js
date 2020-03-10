@@ -7,7 +7,8 @@ async function postData(url = '', data = {}) {
         cache: 'no-cache',
         credentials: 'same-origin',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'csrftoken': 'noforgeryallowed'
         },
         redirect: 'follow',
         referrerPolicy: 'no-referrer',
@@ -16,7 +17,7 @@ async function postData(url = '', data = {}) {
     return await response.json();
 }
 document.querySelector('.save-quote').addEventListener('click', () => {
-    postData('/best', { quote: quoteText })
+    postData('/v1/create', { quote: quoteText })
         .then((data) => {
             console.log(data);
         });
